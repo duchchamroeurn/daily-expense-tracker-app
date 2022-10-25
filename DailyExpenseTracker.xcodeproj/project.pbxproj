@@ -14,6 +14,8 @@
 		AB97B61C2906B2C300F143AC /* DailyExpenseTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AB97B61A2906B2C300F143AC /* DailyExpenseTracker.xcdatamodeld */; };
 		AB97B61E2906B2C600F143AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB97B61D2906B2C600F143AC /* Assets.xcassets */; };
 		AB97B6212906B2C600F143AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB97B61F2906B2C600F143AC /* LaunchScreen.storyboard */; };
+		AB97B62B2906BBF300F143AC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97B62A2906BBF300F143AC /* BaseViewController.swift */; };
+		AB97B62D2906BC0D00F143AC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB97B62C2906BC0D00F143AC /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		AB97B61D2906B2C600F143AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB97B6202906B2C600F143AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB97B6222906B2C600F143AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB97B6282906B65600F143AC /* DailyExpenseTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DailyExpenseTracker.entitlements; sourceTree = "<group>"; };
+		AB97B62A2906BBF300F143AC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AB97B62C2906BC0D00F143AC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,8 @@
 		AB97B6102906B2C300F143AC /* DailyExpenseTracker */ = {
 			isa = PBXGroup;
 			children = (
+				AB97B6292906BBC400F143AC /* Auth */,
+				AB97B6282906B65600F143AC /* DailyExpenseTracker.entitlements */,
 				AB97B6112906B2C300F143AC /* AppDelegate.swift */,
 				AB97B6132906B2C300F143AC /* SceneDelegate.swift */,
 				AB97B6152906B2C300F143AC /* ViewController.swift */,
@@ -68,6 +75,15 @@
 				AB97B61A2906B2C300F143AC /* DailyExpenseTracker.xcdatamodeld */,
 			);
 			path = DailyExpenseTracker;
+			sourceTree = "<group>";
+		};
+		AB97B6292906BBC400F143AC /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				AB97B62A2906BBF300F143AC /* BaseViewController.swift */,
+				AB97B62C2906BC0D00F143AC /* SignInViewController.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,7 +157,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB97B62B2906BBF300F143AC /* BaseViewController.swift in Sources */,
 				AB97B6162906B2C300F143AC /* ViewController.swift in Sources */,
+				AB97B62D2906BC0D00F143AC /* SignInViewController.swift in Sources */,
 				AB97B6122906B2C300F143AC /* AppDelegate.swift in Sources */,
 				AB97B61C2906B2C300F143AC /* DailyExpenseTracker.xcdatamodeld in Sources */,
 				AB97B6142906B2C300F143AC /* SceneDelegate.swift in Sources */,
@@ -289,23 +307,33 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailyExpenseTracker/DailyExpenseTracker.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2933QVY5C7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyExpenseTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DE Tracker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dcr.ios.DailyExpenseTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcr.ios.detracking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,23 +345,33 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DailyExpenseTracker/DailyExpenseTracker.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2933QVY5C7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DailyExpenseTracker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "DE Tracker";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dcr.ios.DailyExpenseTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcr.ios.detracking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
